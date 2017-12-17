@@ -3,8 +3,8 @@ import todos from './todos';
 
 //regroup all reducers
 
-/*const todoApp = combineReducers({
+const todoApp = combineReducers({
   todos
-});*/
+});
 
 export default todoApp;
