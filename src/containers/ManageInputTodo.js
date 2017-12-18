@@ -3,13 +3,11 @@ import { addTodo } from '../actions';
 import InputTodo from '../components/InputTodo';
 
 const mapStateToProps = state => {
-  return {
-    todos: state
-  };
+  return {}; // No state needed in InputTodo
 };
 
 const mapDispatchToProps = dispatch => {
-  // spread to children
+  // Spread to children
   return {
     onClick: text => {
       dispatch(addTodo(text));

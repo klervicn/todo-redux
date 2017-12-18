@@ -21,13 +21,13 @@ const TodoList = ({ todos, onTodoClick, onDeleteClick }) => (
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      isCompleted: PropTypes.bool,
-      text: PropTypes.string
+      id: PropTypes.number.isRequired,
+      isCompleted: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired
     })
-  ),
-  onTodoClick: PropTypes.func,
-  onDeleteClick: PropTypes.func
+  ).isRequired,
+  onTodoClick: PropTypes.func.isRequired,
+  onDeleteClick: PropTypes.func.isRequired
 };
 
 export default TodoList;

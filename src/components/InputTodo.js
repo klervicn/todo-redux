@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class InputTodo extends React.PureComponent {
   constructor() {
@@ -11,7 +12,7 @@ export default class InputTodo extends React.PureComponent {
   }
 
   updateInputValue(evt) {
-    //update state when text is typed
+    // Update state when text is typed
     this.setState({
       inputValue: evt.target.value
     });
@@ -19,7 +20,7 @@ export default class InputTodo extends React.PureComponent {
 
   addATodo(evt) {
     evt.preventDefault(); // No refresh
-    this.props.onClick(this.state.inputValue); // Not really certain that's the good way to do this..
+    this.props.onClick(this.state.inputValue);
     this.setState({
       inputValue: ''
     });
@@ -39,3 +40,6 @@ export default class InputTodo extends React.PureComponent {
     );
   }
 }
+InputTodo.propTypes = {
+  onClick: PropTypes.func.isRequired
+};

@@ -1,6 +1,6 @@
 import todos from './todos';
 
-//regroup all reducers
+// Regroup all reducers
 
 const todoApp = todos;
 

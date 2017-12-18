@@ -9,7 +9,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  // spread to children
+  // Spread to children
   return {
     onTodoClick: id => {
       dispatch(toggleTodo(id));

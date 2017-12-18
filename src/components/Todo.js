@@ -15,10 +15,10 @@ const Todo = ({ onTodoClick, onDeleteClick, isCompleted, text }) => (
 
 //PropTypes
 Todo.propTypes = {
-  onTodoClick: PropTypes.func,
-  onDeleteClick: PropTypes.func,
-  isCompleted: PropTypes.bool,
-  text: PropTypes.string
+  onTodoClick: PropTypes.func.isRequired,
+  onDeleteClick: PropTypes.func.isRequired,
+  isCompleted: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default Todo;
