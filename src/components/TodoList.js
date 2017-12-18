@@ -18,4 +18,16 @@ const TodoList = ({ todos, onTodoClick, onDeleteClick }) => (
 
 //PropTypes
 
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      isCompleted: PropTypes.bool,
+      text: PropTypes.string
+    })
+  ),
+  onTodoClick: PropTypes.func,
+  onDeleteClick: PropTypes.func
+};
+
 export default TodoList;

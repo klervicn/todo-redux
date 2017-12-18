@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export default class InputTodo extends React.PureComponent {
   constructor() {
@@ -40,5 +39,3 @@ export default class InputTodo extends React.PureComponent {
     );
   }
 }
-
-//Proptypes

@@ -14,5 +14,11 @@ const Todo = ({ onTodoClick, onDeleteClick, isCompleted, text }) => (
 );
 
 //PropTypes
+Todo.propTypes = {
+  onTodoClick: PropTypes.func,
+  onDeleteClick: PropTypes.func,
+  isCompleted: PropTypes.bool,
+  text: PropTypes.string
+};
 
 export default Todo;
