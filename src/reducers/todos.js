@@ -3,11 +3,26 @@
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return 'Todo added';
+      return [
+        ...state,
+        {
+          id: action.id,
+          text: action.text,
+          isCompleted: false
+        }
+      ];
     case 'TOGGLE_TODO':
-      return 'Todo toggled';
+      return state.map(
+        todo =>
+          todo.id === action.id // Todo researched
+            ? {
+                ...todo, // keep all info about the todo except completed
+                isCompleted: !todo.isCompleted // inverse value
+              }
+            : todo // if not the todo searched, keep it in the same state
+      );
     case 'DELETE_TODO':
-      return 'Todo deleted';
+      return state;
     default:
       return state;
   }
